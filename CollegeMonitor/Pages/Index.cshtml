@@ -3,9 +3,23 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-
+/*The numbers from 1 to 1000  and multiplication of 45 are displayed below*/
+<br>
+@for(int i=1;i<=1000;i++)
+{
+    @i <br>
+}
+@{
+    int num = 45; 
+    string abc = "The multiplication of 45 is as below:";
+    @abc
+    for (int i = 1; i <= 10; i++)
+    {
+        <p>@num * @i = @(num * i)</p>
+    }
+    
+}
