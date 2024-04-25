@@ -20,4 +20,16 @@ CollegeMonitor -https://collegemonitor.com
 4. UAT - PO/TPO/BA, User Acceptance Testing (https:://uat.collegemonitor.com)
 5. PROD - Production Environment(https://collegemonitor.com)
 
-###JQuery is the javascript library 
+### JQuery is the javascript library 
+
+### CollegeMonitor Requirements
+
+## Entities/Tables/Model
+1. Class - Id, Title, Startdate, Duration
+2. Course - Id, Name, Textbook, CreditHrs
+3. Student - Id, Name, Address, Program, Semester
+4. Faculty - Id, Name, Department
+
+>Course has multiple classes(one to many). 
+>Student can take multiple courses and a course  can have multiple students(many to    many).
+>
