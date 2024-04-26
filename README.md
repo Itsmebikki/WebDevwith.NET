@@ -32,4 +32,3 @@ CollegeMonitor -https://collegemonitor.com
 
 >Course has multiple classes(one to many). 
 >Student can take multiple courses and a course  can have multiple students(many to    many).
->
