@@ -19,7 +19,10 @@
         <th scope="row">@index</th>
         <td>@course.Name</td>
         <td>@course.TextBook</td>
-        <td>@course.CreditHrs</td>           
+        <td>@course.CreditHrs
+          <a class="btn btn-primary ms-2" href="/courses/edit/@course.Id"><i class="bi bi-pencil-square"></i></a>
+          <a class="btn btn-primary ms-2" href="/courses/edit/@course.Id"><i class="bi bi-trash"></i></a>
+        </td>
       </tr>
     }    
   </tbody>
