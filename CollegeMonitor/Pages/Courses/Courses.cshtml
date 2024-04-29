@@ -13,14 +13,14 @@
     </tr>
   </thead>
   <tbody>
-    @foreach(var course in Model.Courses)
+    @foreach(var (course, index) in Model.Courses.Select((c,i) => (c, i+1)))
     {
-        <tr>
-            <th scope="row">1</th>
-            <td>@course.Name</td>
-            <td>@course.TextBook</td>
-            <td>@course.CreditHrs</td>           
-        </tr>   
+      <tr>
+        <th scope="row">@index</th>
+        <td>@course.Name</td>
+        <td>@course.TextBook</td>
+        <td>@course.CreditHrs</td>           
+      </tr>
     }    
   </tbody>
 </table>
