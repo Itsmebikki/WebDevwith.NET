@@ -10,6 +10,7 @@
       <th scope="col">Name</th>
       <th scope="col">Textbook</th>
       <th scope="col">Credit Hours</th>
+      <th scope="col">Edit/Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -19,9 +20,10 @@
         <th scope="row">@index</th>
         <td>@course.Name</td>
         <td>@course.TextBook</td>
-        <td>@course.CreditHrs
-          <a class="btn btn-secondary ms-2" href="/courses/edit/@course.Id"><i class="bi bi-pencil-square"></i></a>
-          <a class="btn btn-warning ms-2" href="/courses/edit/@course.Id"><i class="bi bi-trash"></i></a>
+        <td>@course.CreditHrs</td>
+        <td>
+          <a class="btn btn-warning" href="/courses/edit/@course.Id"><i class="bi bi-pencil-square"></i></a>
+          <a class="btn btn-danger" href="/courses/edit/@course.Id"><i class="bi bi-trash"></i></a>
         </td>
       </tr>
     }    
