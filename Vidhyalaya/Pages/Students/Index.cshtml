@@ -1,4 +1,4 @@
-@page
+@page "/Students"
 @model Vidhyalaya.Pages_Students.IndexModel
 
 <p>
@@ -56,9 +56,9 @@
                 @Html.DisplayFor(modelItem => item.Grade.GradeId)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.StudentId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.StudentId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.StudentId">Delete</a>
+                <a asp-page="/Student/Edit" asp-route-id="@item.StudentId">Edit</a> |
+                <a asp-page="/Student/Details" asp-route-id="@item.StudentId">Details</a> |
+                <a asp-page="/Student/Delete" asp-route-id="@item.StudentId">Delete</a>
             </td>
         </tr>
 }
