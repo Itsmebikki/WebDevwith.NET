@@ -1,9 +1,7 @@
-@page "/Students"
+@page 
 @model Vidhyalaya.Pages_Students.IndexModel
 
-<p>
-    <a asp-page="Create"class="btn btn-success"><i class="bi bi-plus-lg"></i>Create New</a>
-</p>
+<a href="/students/create"class="btn btn-success"><i class="bi bi-plus-lg"></i>New Student</a>
 <table class="table">
     <thead>
         <tr>
@@ -56,9 +54,9 @@
                 @Html.DisplayFor(modelItem => item.Grade.GradeId)
             </td>
             <td>
-                <a asp-page=".Edit" asp-route-id="@item.StudentId">Edit</a> |
-                <a asp-page=".Details" asp-route-id="@item.StudentId">Details</a> |
-                <a asp-page=".Delete" asp-route-id="@item.StudentId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.StudentId"><i class="bi bi-pencil-square btn btn-warning"></i></a> |
+                <a asp-page="./Details" asp-route-id="@item.StudentId"><i class="bi bi-eye "></i></a> |
+                <a asp-page="./Delete" asp-route-id="@item.StudentId"><i class="bi bi-trash3 btn btn-danger"></i></a>
             </td>
         </tr>
 }
