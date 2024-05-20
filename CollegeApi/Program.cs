@@ -4,7 +4,7 @@ builder.Services.AddDbContext<CollegeDbContext>();
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "Hello we are learning developing REST API on .NET");
 app.MapGet("/courses", (CollegeDbContext db) => db.Courses.ToList());
 app.MapGet("/courses/{id:int}", (int id, CollegeDbContext db) => db.Courses.Find(id));
 app.MapGet("/sessions", (CollegeDbContext db) => db.Sessions.ToList());
