@@ -21,7 +21,9 @@ namespace CollegeMonitor.Pages_Sessions
 
         public async Task OnGetAsync()
         {
-            Session = await _context.Sessions.Include(x => x.Course).ToListAsync();
+            // Session = await _context.Sessions.Include(x => x.Course).ToListAsync();
+            HttpClient http = new HttpClient();
+            Session = await http.GetFromJsonAsync<List<Session>>("http://localhost:5129/sessions");
         }
     }
 }
