@@ -16,35 +16,35 @@ app.MapPost("/courses", (Course course, CollegeDbContext db) =>
     db.SaveChanges();
 });
 
-app.MapPost("/courses", (int id, Course course, CollegeDbContext db) =>
+app.MapPut("/courses", (Course course, CollegeDbContext db) =>
 {
     db.Courses.Update(course);
     db.SaveChanges();
 });
 
-app.MapPost("/courses", (int id, Course course, CollegeDbContext db) =>
-{
-    db.Courses.Remove(course);
-    db.SaveChanges();
-});
+//app.MapDelete("/courses", (int id, Course course, CollegeDbContext db) =>
+//{
+//     db.Courses.Remove(course);
+//     db.SaveChanges();
+//});
 
-//for Session
-app.MapPost("/sessions", (Session session, CollegeDbContext db) =>
-{
-    db.Sessions.Add(session);
-    db.SaveChanges();
-});
+//// for Session
+//app.MapPost("/sessions", (Session session, CollegeDbContext db) =>
+//{
+//     db.Sessions.Add(session);
+//     db.SaveChanges();
+//});
 
-app.MapPost("/session", (int id, Session session, CollegeDbContext db) =>
-{
-    db.Sessions.Update(session);
-    db.SaveChanges();
-});
+//app.MapPut("/session", (int id, Session session, CollegeDbContext db) =>
+//{
+//     db.Sessions.Update(session);
+//     db.SaveChanges();
+//});
 
-app.MapPost("/sessions", (int id, Session session, CollegeDbContext db) =>
-{
-    db.Sessions.Remove(session);
-    db.SaveChanges();
-});
+//app.MapDelete("/sessions", (int id, Session session, CollegeDbContext db) =>
+//{
+//     db.Sessions.Remove(session);
+//     db.SaveChanges();
+//});
 
 app.Run();
